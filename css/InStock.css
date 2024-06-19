@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-avatar-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.avatar-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.avatar-icon:hover {
+    /* Hiệu ứng khi di chuột qua */
+    opacity: 0.7;
+}
+
+
+.header-option-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header-option-btn .button-icon {
+    width: 40px;
+    height: 40px;
+}
+
+
+.main-container {
+    display: flex;
+    height: calc(100vh - 55px);
+}
+
+.sidebar {
+    width: 84px;
+    background-color: rgba(86, 85, 155, 1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.sidebar-hidden {
+    transform: translateX(-84px);
+}
+
+.sidebar-menu,
+.sidebar-bottom-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar-menu li,
+.sidebar-bottom-menu li {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.sidebar-menu li a,
+.sidebar-bottom-menu li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-bottom-menu li a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+/* Thêm vào cuối file CSS */
+.content {
+    flex: 1;
+    padding: 0;
+    overflow-y: auto;
+}
+
+
+
+.block-button {
+    background-color: #e0e0e0;
+    padding: 5px 5px; /* Giảm kích thước của các nút */
+    border: none;
+    cursor: pointer;
+    flex: 1; /* Để các button có kích thước đều nhau */
+    margin: 0; /* Loại bỏ khoảng cách giữa các nút */
+}
+
+.block-button:first-child {
+    border-radius: 8px 0 0 0; /* Bo tròn góc trên trái */
+}
+
+.block-button:last-child {
+    border-radius: 0 8px 0 0; /* Bo tròn góc trên phải */
+}
+
+.block-button:not(:last-child) {
+    border-right: 1px solid #ccc; /* Đường viền để phân chia giữa các nút */
+}
+
+.block-button:hover {
+    background-color: #d0d0d0;
+}
+
+.white-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 0 8px 8px; /* Bo tròn các góc phía dưới */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0; /* Không có khoảng cách giữa button và content */
+    border-top: 1px solid #ccc; /* Đường viền trên để tách biệt với các nút */
+}
